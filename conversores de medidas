@@ -1,0 +1,276 @@
+class ConversorActivity : Activity(), View.OnClickListener {
+    val conversor = Conversor()
+
+    // fun define un método o function, equivalente a def de Xtend
+    // los parámetros opcionales se terminan con un ?
+    override fun onCreate(savedInstanceState: Bundle) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_conversor)
+        conversor_convertir.setOnClickListener(this)
+val conversor = Conversor()
+
+    // fun define un método o function, equivalente a def de Xtend
+    // los parámetros opcionales se terminan con un ?
+    override fun onCreate(savedInstanceState: Bundle) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_conversor)
+        conversor_convertir.setOnClickListener(this)
+
+xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/conversor_millas_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/millas"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/conversor_millas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/millas"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/conversor_convertir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="convertir"
+        android:padding="10dp"
+        android:text="@string/convertir" />
+
+    <TextView
+        android:id="@+id/conversor_kilometros_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/kilometros"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/conversor_kilometros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:textColor="#0B173B"
+        android:hint="@string/kilometros" />
+conversor_kilometros.text = conversor.kilometrosAsString()
+    } catch (e: NumberFormatException) {
+        Toast.makeText(this.getApplicationContext(), "Debe ingresar un valor numérico", Toast.LENGTH_LONG).show()
+        Moneda
+        @Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
+
+    Spinner sp = (Spinner) findViewById(R.id.spinner);
+    AdaptadorPersonalizado a = new AdaptadorPersonalizado(this, R.layout.diseno_combo, tiposDeMoneda);
+    sp.setAdapter(a);
+    sp.setOnItemSelectedListener(this);
+
+    resultado = (TextView) findViewById(R.id.textView4);
+    entrada = (TextView) findViewById(R.id.editText);
+
+    Button boton = (Button) findViewById(R.id.button);
+    boton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            double resultadoNumero;
+
+            if (opcionSalida == 0 && opcionEntrada == 0) {
+                resultado.setText(entrada.getText());
+            }
+
+            if (opcionEntrada == 0 && opcionSalida == 1) {
+                int num1 = entrada.getInputType();
+                double num2 = 0.89;
+
+                resultadoNumero =  num2 * num1;
+                resultado.setText(String.valueOf(resultadoNumero));
+
+            }
+
+            if (opcionEntrada == 0 && opcionSalida == 2) {
+                int num1 = entrada.getInputType();
+                double num3 = 1.14;
+
+                resultadoNumero = num1 * num3;
+                resultado.setText(String.valueOf(resultadoNumero));
+            }
+        }
+    });
+}
+
+@Override
+public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+    TextView textView = (TextView) view.findViewById(R.id.textView);
+    String valor = (String) textView.getText();
+    switch (valor) {
+        case "Euro":
+            opcionSalida = 0;
+            break;
+
+        case "Reino Unido":
+            opcionSalida = 1;
+            break;
+
+        case "Estados Unidos":
+            opcionSalida = 2;
+            break;
+
+    }
+    Toast.makeText(this, textView.getText(), Toast.LENGTH_SHORT).show();
+
+}
+
+@Override
+public void onNothingSelected(AdapterView<?> adapterView) {
+System.out.println("Cual es su peso ");
+        p= teclado.nextDouble();
+        System.out.println("Cual es tu estatura");
+        e= teclado.nextDouble();
+        //----------------CALCULO----------------
+        imc= p/(e*e);
+        System.out.println("SU IMC ES: "+imc);
+        //--------SITUACION IMC POR PERSONA-------    
+        if (imc<18.5) {
+            System.out.println("BAJO PESO");
+        } else if (imc>=18.5 && imc<=24.9) {
+            System.out.println("NORMAL");
+        } else if (imc>=25 && imc<=29.9) {
+            System.out.println("SOBREPESO");
+        } else {
+            System.out.println("OBESIDAD");
+            private static final String TAGGOOGLE = "GoogleActivity";
+private static final int RC_SIGN_IN = 1;
+private int STORAGE_PERMISSION_CODE= 1;//Para los permisos
+
+final private int REQUEST_CODE_ASK_PERMISSIONS = 111;
+
+private static final String TAG = "CAPublicaOfertaActivity";
+
+//COORDENADAS ENTRE LAS QUE BUSCA EL AUTOCOMPLETE
+private static final LatLngBounds LAT_LNG_BOUNDS = new LatLngBounds(
+        new LatLng(27.666172, -18.273932), new LatLng(42.772283, 4.747570));
+
+//PARTE CODIGO AUTOOMPLETE
+AutoCompleteTextView etdireccionnegocioAutoCA;
+PlaceAutocompleteAdapter mPlaceAutocompleteAdapter;
+GoogleApiClient mGoogleApiClient;
+
+//DECLARO VARIANTES
+TextView tvocultolatitudCA, tvocultolongitudCA, tvocultoCA;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_capublicar_oferta);
+
+
+    // AUTOCOMPLETE
+    etdireccionnegocioAutoCA = (AutoCompleteTextView) findViewById(R.id.etdireccionnegocioAutoCA);
+    //INICIAR PROCESO AUTOOMPLETE
+    init();
+
+
+
+    //ENLAZO VARIANTES
+
+    tvocultolatitudCA = (TextView) findViewById(R.id.tvocultolatitudCA);
+    tvocultolongitudCA = (TextView) findViewById(R.id.tvocultolongitudCA);
+    tvocultoCA = (TextView) findViewById(R.id.tvocultoCA);
+
+}//FIN ONCREATE
+
+
+//BOTON OBTENER DIRECCION
+public void obtenerdireccion (View view){
+    locationStart();
+}
+
+//MANDAR OFERTA
+public void publicaroferta(View view) {
+Checks if a volume containing external storage is available
+// for read and write.
+fun isExternalStorageWritable(): Boolean {
+    return Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED
+}
+
+// Checks if a volume containing external storage is available to at least read.
+fun isExternalStorageReadable(): Boolean {
+     return Environment.getExternalStorageState() in
+        setOf(Environment.MEDIA_MOUNTED, Environment.MEDIA_MOUNTED_READ_ONLY
+        pager.flow // Type is Flow<PagingData<User>>.
+  // Map the outer stream so that the transformations are applied to
+  // each new generation of PagingData.
+  .map { pagingData ->
+    // Transformations in this block are applied to the items
+    // in the paged data
+    pager.flow // Type is Flow<PagingData<User>>.
+  .map { pagingData ->
+    pagingData.map { user -> UiModel(user) }
+  }
+  private val queryFlow = MutableStateFlow("")
+
+fun onQueryChanged(query: String) {
+  queryFlow.value = query
+}
+al querySearchResults = queryFlow.flatMapLatest { query ->
+  // The database query returns a Flow which is output through
+  // querySearchResults
+  userDatabase.searchBy(query)
+  // Convert items in stream to UiModel.UserModel.
+    UiModel.UserModel(user)
+  }
+  .insertSeparators<UiModel.UserModel, UiModel> { before, after ->
+    when {
+      before == null -> UiModel.SeparatorModel("HEADER")
+      after == null -> UiModel.SeparatorModel("FOOTER")
+      shouldSeparate(before, after) -> UiModel.SeparatorModel(
+        "BETWEEN ITEMS $before AND $after"
+      )
+      // Return null to avoid adding a separator between two items.
+      else -> null
+    }
+  }
+}
+override fun onBindViewHolder(
+    holder: RecyclerView.ViewHolder,
+    position: Int
+  ) {
+    val item = getItem(position)
+    if (holder is UserModelViewHolder) {
+      holder.bind(item as UserModel)
+    } else if (holder is SeparatorModelViewHolder) {
+      holder.bind(item as SeparatorModel)
+    }
+  }
+}
+
+object UiModelComparator : DiffUtil.ItemCallback<UiModel>() {
+  override fun areItemsTheSame(
+    oldItem: UiModel,
+    newItem: UiModel
+  ): Boolean {
+    val isSameRepoItem = oldItem is UiModel.UserModel
+      && newItem is UiModel.UserModel
+      && oldItem.id == newItem.id
+
+    val isSameSeparatorItem = oldItem is UiModel.SeparatorModel
+      && newItem is UiModel.SeparatorModel
+      && oldItem.description == newItem.description
+
+    return isSameRepoItem || isSameSeparatorItem
+  }
+
+  override fun areContentsTheSame(
+    oldItem: UiModel,
+    newItem: UiModel
+  ) = oldItem == newItem
